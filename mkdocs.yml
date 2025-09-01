@@ -1,0 +1,61 @@
+site_name: My Documentation
+site_url: https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/
+repo_url: https://github.com/Abhijnan345Ghosh/google_adk_ollama_project/
+
+theme:
+  name: material
+  icon:
+    edit: material/pencil
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.action.edit
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: blue
+      accent: teal
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: black
+      accent: lime
+
+nav:
+  - About: index.md
+  - Project Overview: project-overview.md
+#  - Configuration: configuration.md
+#  - Folder Structure: folder-structure.md
+ # - Setup: setup.md
+#  - Usage Examples: examples.md
+  - FAQs: faq.md
+
+markdown_extensions:
+  - admonition
+  # - pymdownx.details
+  # - pymdownx.superfences:
+  #     custom_fences:
+  #       - name: mermaid
+  #         class: mermaid
+  #         format: !!python/name: pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - attr_list
+  - tables
+
+plugins:
+  - search
+
+
