@@ -13,7 +13,3 @@ The core SDK package that includes:
 - **Integration Utilities** – Tools for connecting with SAGE platform services  
 - **Agent Development Kit (ADK)** – Components for building AI agents  
 - **Gateway Services** – Communication layer for interacting with the SAGE platform  
-
-**Here is the new line** 
-
-**Now directly changes**
