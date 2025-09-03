@@ -1,4 +1,4 @@
-from fastapi import FastAPI,Request
+from fastapi import FastAPI,Request,Body
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
@@ -27,13 +27,10 @@ async def health_check():
 
 # Endpoint for the greeting agent
 @app.post("/greet")
-async def greeting_agent(req: Request):
+async def greeting_agent(query: str = Body(...)):
     user_id = USER_ID
     final_response = FINAL_RESPONSE
     app_name = APP_NAME
-
-    body = await req.json()              # parse raw JSON body
-    query = body.get("query")            # extract field manually
 
     session = await session_service.create_session(
         user_id=user_id, 
@@ -42,7 +39,7 @@ async def greeting_agent(req: Request):
 
     user_message = types.Content(
         role = "user",
-        parts = [types.Part(text = req.query)]
+        parts = [types.Part(text = query)]
     )
 
     events = runner.run_async(
@@ -57,4 +54,4 @@ async def greeting_agent(req: Request):
                 final_response = event.content.parts[0].text
                 print(f"Agent Response", final_response)
 
-    return QueryResponse(response = final_response)
+    return {"response": final_response}
