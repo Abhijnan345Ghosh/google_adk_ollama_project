@@ -48,4 +48,5 @@ async def greeting_agent(req: QueryRequest):
             print(f"Agent Response", final_response)
 
 if __name__ == "__main__":
-    asyncio.run(greeting_agent("What is the advantage of using google adk"))
+    req = QueryRequest(query="What is the advantage of using google adk")
+    asyncio.run(greeting_agent(req))
