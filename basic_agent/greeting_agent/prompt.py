@@ -1,0 +1,11 @@
+MODEL = "ollama/phi3"
+NAME = "greeting_agent"
+DESCRIPTION = "Agent powered by ollma using Google ADk"
+INSTRUCTION = "You are a friendly greeting agent. Respond in brief and "
+
+TITLE = "ADK ollama Agent"
+DESCRIPTION_MAIN = "A FastApi server"
+VERSION = "1.0.0"
+USER_ID = "default_app"
+APP_NAME = "greeting_app"
+FINAL_RESPONSE = "No response from agent"
