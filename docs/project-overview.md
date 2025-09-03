@@ -15,3 +15,5 @@ The core SDK package that includes:
 - **Gateway Services** – Communication layer for interacting with the SAGE platform  
 
 **Here is the new line** 
+
+**Now directly changes**

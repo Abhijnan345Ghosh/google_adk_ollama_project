@@ -64,6 +64,18 @@ Let’s break this down carefully — all of these are **common steps in a GitHu
 remote: Permission to Abhijnsdfsfa/googleect.git denied to github-actions[bot].
 
 
+**TO RESOLVE THIS ISSUE DONE THIS**
+
+1️⃣ Repository-level Workflow Permissions
+
+1. Go to your repository → Settings → Actions → General.
+2. Scroll down to Workflow permissions.
+3. Select “Read and write permissions”.
+4. (Optional) Check “Allow GitHub Actions to create and approve pull requests” if your workflow needs it.
+5. Click Save.
+
+
+
 — happens when the **GitHub Actions bot doesn’t have permission to push to the repository**. Let me explain and fix it step by step.
 
 
