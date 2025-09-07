@@ -9,6 +9,9 @@ on:
       - 'docs/**'         # Or any docs folder changes
       - 'mkdocs.yml'      # Or changes to mkdocs config
 
+permissions:
+  contents: write
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
