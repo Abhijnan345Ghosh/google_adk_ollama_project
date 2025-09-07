@@ -23,7 +23,7 @@ app = FastAPI(
 #-- Routes -- 
 @app.get("/health")
 async def health_check():
-    return {"status": "ok","status_code": 200}
+    return {"status_message": "ok","status_code": 200}
 
 # Endpoint for the greeting agent
 @app.post("/greet", response_model=QueryResponse)
