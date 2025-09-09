@@ -2,7 +2,7 @@ from ast import Return
 
 
 MODEL = "ollama/llama3"
-NAME = "reasoning_agent"
+NAME = "reasoning_agent_tool"
 DESCRIPTION = "Agent powered by ollama using Google ADK"
 INSTRUCTION = (
     "You are agent that can use two tools: 'calculator' and 'search'. "

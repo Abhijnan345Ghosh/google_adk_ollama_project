@@ -2,14 +2,14 @@ from fastapi import FastAPI
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
-from reasoning_agent_tool.reasoning_agent import root_agent
+from reasoning_agent_tool.reasoning_agent import reasoning_agent_tool
 from reasoning_agent_tool.prompt import *
 from reasoning_agent_tool.model import *
 
 session_service = InMemorySessionService()
 
 runner = Runner(
-    agent = root_agent,
+    agent = reasoning_agent_tool,
     app_name=APP_NAME,
     session_service=session_service
 )

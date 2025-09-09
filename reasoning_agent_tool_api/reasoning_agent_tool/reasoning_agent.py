@@ -31,10 +31,10 @@ planner = BuiltInPlanner(
     )
 )
 
-root_agent = Agent(
+reasoning_agent_tool = Agent(
     model=LiteLlm(model=MODEL),
-    name="react_agent",
-    description="ReAct agent with calculator & search",
+    name=NAME,
+    description=DESCRIPTION,
     instruction=INSTRUCTION,
     planner=planner,
     tools=[calculator, search],   # pass functions directly (ADK will wrap)
