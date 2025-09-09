@@ -1,6 +1,3 @@
-from ast import Return
-
-
 MODEL = "ollama/llama3"
 NAME = "reasoning_agent_tool"
 DESCRIPTION = "Agent powered by ollama using Google ADK"
