@@ -69,12 +69,10 @@ async def reasoning_agent(req: QueryRequest):
                     elif getattr(part, "thought", False):  # check if it's a thought
                         if not thoughts:
                             print("Thoughts summary:")
-                        print(part.text)
                         thoughts += part.text
                     else:
                         if not final_response:
                             print("Answer:")
-                        print(part.text)
                         final_response += part.text
     print("Thoughts Summary:", thoughts)
     print("Final Response:", final_response)

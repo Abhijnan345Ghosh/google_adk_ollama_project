@@ -37,5 +37,5 @@ reasoning_agent_tool = Agent(
     description=DESCRIPTION,
     instruction=INSTRUCTION,
     planner=planner,
-    tools=[calculator, search],   # pass functions directly (ADK will wrap)
+    tools=[calculator, search]   # pass functions directly (ADK will wrap)
 )
