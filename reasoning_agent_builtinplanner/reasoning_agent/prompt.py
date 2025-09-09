@@ -2,7 +2,7 @@ from ast import Return
 
 
 MODEL = "ollama/llama3"
-NAME = "agent" 
+NAME = "reasoning_agent" 
 DESCRIPTION = "Agent powered by ollama using Google ADK"
 INSTRUCTION = """
 You are a planner agent.  Use the planner strictly.

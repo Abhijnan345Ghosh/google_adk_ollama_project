@@ -1,7 +1,7 @@
-MODEL = "ollama/phi3"
+MODEL = "ollama/llama3"
 NAME = "greeting_agent"
-DESCRIPTION = "Agent powered by ollma using Google ADk"
-INSTRUCTION = "You are a friendly greeting agent. Respond in brief and "
+DESCRIPTION = "Agent powered by ollama using Google ADk"
+INSTRUCTION = "You are a friendly greeting agent. Respond in brief and cheerful manner."
 
 TITLE = "ADK ollama Agent"
 DESCRIPTION_MAIN = "A FastApi server"

@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
-from greeting_agent.greeting_agent import root_agent
+from greeting_agent.agent import root_agent
 from greeting_agent.prompt import *
 from greeting_agent.model import *
 

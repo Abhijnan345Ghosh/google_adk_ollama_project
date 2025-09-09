@@ -23,19 +23,12 @@ def search(query: str) -> str:
     """Mock search — replace with real API if needed."""
     return f"(mock search results for: {query})"
 
-# ---------- Planner & Agent ----------
-planner = BuiltInPlanner(
-    thinking_config=types.ThinkingConfig(
-        include_thoughts=True,
-        thinking_budget=512
-    )
-)
 
-reasoning_agent_tool = Agent(
+
+root_agent = Agent(
     model=LiteLlm(model=MODEL),
     name=NAME,
     description=DESCRIPTION,
     instruction=INSTRUCTION,
-    planner=planner,
     tools=[calculator, search]   # pass functions directly (ADK will wrap)
 )

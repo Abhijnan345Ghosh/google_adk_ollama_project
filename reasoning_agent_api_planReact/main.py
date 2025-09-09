@@ -3,12 +3,11 @@ from fastapi import FastAPI
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
-from reasoning_agent_tool.agent import root_agent
-from reasoning_agent_tool.prompt import *
-from reasoning_agent_tool.model import *
+from reasoning_agent.agent import root_agent
+from reasoning_agent.prompt import *
+from reasoning_agent.model import *
 
 SESSION_ID = str(uuid.uuid4())
-
 session_service = InMemorySessionService()
 
 runner = Runner(
@@ -37,7 +36,8 @@ async def reasoning_agent(req: QueryRequest):
 
     session = await session_service.create_session(
         user_id=user_id, 
-        app_name=app_name
+        app_name=app_name,
+        session_id=SESSION_ID
     )
 
     user_message = types.Content(
@@ -48,19 +48,32 @@ async def reasoning_agent(req: QueryRequest):
     events = runner.run_async(
         new_message  = user_message,
         user_id = user_id,
-        session_id = session.id
+        session_id=SESSION_ID
     )
 
     async for event in events:
-
         if event.is_final_response():
             if event.content and event.content.parts:
-                print(event.content.parts.thoughts)
-                final_response = event.content.parts[0].text
+                print("========================================================================")
+                print(f"Actual Response: \n{event.content.parts}")
+                print("========================================================================")
+
+                raw_text = event.content.parts[0].text
+                if "**FINAL_ANSWER**" in raw_text:
+                    thoughts, final_response = raw_text.split("**FINAL_ANSWER**", 1)
+                    thoughts = thoughts.strip()
+                    final_response = final_response.strip()
+                else:
+                    thoughts = raw_text.strip()
+                    final_response = ""
+
+                print(f"Agent Thoughts: \n{thoughts}")
+                print("========================================================================")
                 print(f"Agent Response: \n{final_response}")
+                print("========================================================================")
 
 
-    return QueryResponse(response=final_response)
+    return QueryResponse(thoughts=thoughts, response=final_response)
 
 
 
