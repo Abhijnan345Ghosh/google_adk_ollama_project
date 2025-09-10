@@ -51,29 +51,44 @@ async def reasoning_agent(req: QueryRequest):
         session_id=SESSION_ID
     )
 
+    """Here when trying to divide the thoughts and final response, the response was commming in 2 parts and 
+    hence the split was not happening correctly."""
+    # async for event in events:
+    #     if event.is_final_response():
+    #         if event.content and event.content.parts:
+    #             print("========================================================================")
+    #             print(f"Actual Response: \n{event.content.parts}")
+    #             print("========================================================================")
+
+    #             raw_text = event.content.parts[0].text
+    #             if "FINAL_ANSWER" in raw_text:
+    #                 thoughts, final_response = raw_text.split("FINAL_ANSWER", 1)
+    #                 thoughts = thoughts.strip()
+    #                 final_response = final_response.strip()
+    #             else:
+    #                 thoughts = raw_text.strip()
+    #                 final_response = ""
+
+    #             print(f"Agent Thoughts: \n{thoughts}")
+    #             print("========================================================================")
+    #             print(f"Agent Response: \n{final_response}")
+    #             print("========================================================================")
+
+
+    # return QueryResponse(thoughts=thoughts, response=final_response)
+
     async for event in events:
+
         if event.is_final_response():
             if event.content and event.content.parts:
                 print("========================================================================")
                 print(f"Actual Response: \n{event.content.parts}")
                 print("========================================================================")
+                #print(event.content.parts.thoughts)
+                final_response = event.content.parts[0].text
+                print(f"Agent Response", final_response)
 
-                raw_text = event.content.parts[0].text
-                if "**FINAL_ANSWER**" in raw_text:
-                    thoughts, final_response = raw_text.split("**FINAL_ANSWER**", 1)
-                    thoughts = thoughts.strip()
-                    final_response = final_response.strip()
-                else:
-                    thoughts = raw_text.strip()
-                    final_response = ""
-
-                print(f"Agent Thoughts: \n{thoughts}")
-                print("========================================================================")
-                print(f"Agent Response: \n{final_response}")
-                print("========================================================================")
-
-
-    return QueryResponse(thoughts=thoughts, response=final_response)
+    return QueryResponse(response=final_response)
 
 
 
