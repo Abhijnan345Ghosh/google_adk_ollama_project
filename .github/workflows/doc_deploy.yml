@@ -3,7 +3,8 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - docs/CT2   # Trigger on pushes to main branch
+      - docs/CT2   # Trigger on pushes to docs/CT2 branch
+      - master     # Trigger on pushes to master branch
     paths:
       - '**.md'           # Trigger if any markdown file changes
       - 'docs/**'         # Or any docs folder changes
