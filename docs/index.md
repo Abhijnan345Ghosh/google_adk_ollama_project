@@ -7,5 +7,5 @@ Welcome to the **SAGE SDK Python** documentation. This SDK provides utilities to
 ## Table of Contents
 
 1. [Project Overview](project-overview.md) – High-level description of the project and its components     
-2. [FAQ](faq.md) – This line is intentionally changed to create a conflict with master
+2. [FAQ](faq.md) – This is changes createa  conflict
 3. [New](new.md) – Old documntsion
