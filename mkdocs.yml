@@ -40,6 +40,7 @@ nav:
  # - Setup: setup.md
 #  - Usage Examples: examples.md
   - FAQs: faq.md
+  - New: new.md
 
 markdown_extensions:
   - admonition
