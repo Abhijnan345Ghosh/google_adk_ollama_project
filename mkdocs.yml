@@ -36,8 +36,8 @@ nav:
   - About: index.md
   - Project Overview: project-overview.md
   - Configuration: configuration.md
-    - Folder Structure: folder-structure.md
-    - Setup: setup.md
+      - Folder Structure: folder-structure.md
+      - Setup: setup.md
   - FAQs: faq.md
   - New: new.md
 
