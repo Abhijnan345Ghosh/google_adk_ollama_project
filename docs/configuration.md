@@ -2,5 +2,5 @@ Welcome to the **SAGE SDK Python** documentation. This SDK provides utilities to
 
 ## Table of Contents
 
- [folder-structure](folder-structure.md)
- [setup](setup.md)
+- [folder-structure](folder-structure.md)
+- [setup](setup.md)
