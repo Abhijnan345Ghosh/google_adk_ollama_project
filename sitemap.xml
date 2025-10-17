@@ -2,14 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/</loc>
-         <lastmod>2025-09-17</lastmod>
+         <lastmod>2025-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/configuration/</loc>
+         <lastmod>2025-10-17</lastmod>
     </url>
     <url>
          <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/faq/</loc>
-         <lastmod>2025-09-17</lastmod>
+         <lastmod>2025-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/folder-structure/</loc>
+         <lastmod>2025-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/new/</loc>
+         <lastmod>2025-10-17</lastmod>
     </url>
     <url>
          <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/project-overview/</loc>
-         <lastmod>2025-09-17</lastmod>
+         <lastmod>2025-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://Abhijnan345Ghosh.github.io/google_adk_ollama_project/setup/</loc>
+         <lastmod>2025-10-17</lastmod>
     </url>
 </urlset>
